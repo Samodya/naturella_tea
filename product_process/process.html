@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Process - Naturella Food Products</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        stone: { 50: '#fafaf9', 100: '#f5f5f4', 200: '#e7e5e4', 300: '#d6d3d1', 400: '#a8a29e', 500: '#78716c', 600: '#57534e', 700: '#44403c', 800: '#292524', 900: '#1c1917', 950: '#0c0a09' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Gallery-specific styles */
+        .gallery-item.hide {
+            display: none;
+        }
+        .gallery-item.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="font-sans text-stone-800 bg-stone-50 antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="sticky top-0 w-full z-50 transition-all duration-300 py-2 bg-white text-stone-800 shadow-lg">
+        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center space-x-3">
+                <!-- Logo -->
+                <div class="w-40 h-12 flex items-center justify-center">
+                      <img src="../Naturella_Logo_new.png" alt="Naturella Logo" class="w-35 object-cover"/>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="../index.html#about" class="nav-link font-medium text-stone-600 hover:text-orange-600 transition-colors uppercase text-sm tracking-widest">About</a>
+                <a href="../index.html#products" class="nav-link font-medium text-stone-600 hover:text-orange-600 transition-colors uppercase text-sm tracking-widest">Products</a>
+                <a href="../index.html#process" class="nav-link font-medium text-orange-600 hover:text-orange-700 transition-colors uppercase text-sm tracking-widest">Process</a>
+                <a href="../index.html#partner" class="nav-link font-medium text-stone-600 hover:text-orange-600 transition-colors uppercase text-sm tracking-widest">Partner</a>
+                <a href="../index.html#contact" class="nav-link font-medium text-stone-600 hover:text-orange-600 transition-colors uppercase text-sm tracking-widest">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-green-800 focus:outline-none">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white absolute top-full left-0 w-full shadow-xl border-t border-stone-100">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="../index.html#about" class="mobile-link text-left font-bold text-stone-700 hover:text-green-600 py-2 border-b border-stone-100">About</a>
+                <a href="../index.html#products" class="mobile-link text-left font-bold text-stone-700 hover:text-green-600 py-2 border-b border-stone-100">Products</a>
+                <a href="../index.html#process" class="mobile-link text-left font-bold text-stone-700 hover:text-green-600 py-2 border-b border-stone-100">Process</a>
+                <a href="../index.html#partner" class="mobile-link text-left font-bold text-stone-700 hover:text-green-600 py-2 border-b border-stone-100">Partner</a>
+                <a href="../index.html#contact" class="mobile-link text-left font-bold text-stone-700 hover:text-green-600 py-2 border-b border-stone-100">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-24 px-4 md:px-6">
+        <div class="container mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-20">
+                <h2 class="text-green-700 font-bold text-sm tracking-widest uppercase mb-3">How It's Made</h2>
+                <h1 class="text-4xl md:text-5xl font-serif font-bold text-stone-900">Our Production Process</h1>
+                <p class="text-stone-600 mt-4 max-w-2xl mx-auto">From garden to cup, we meticulously control every step to ensure purity and potency. Explore the stages of our process below.</p>
+                <div class="mt-8">
+                    <a href="../index.html#products" class="inline-block bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-8 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg uppercase text-sm tracking-widest">View Products</a>
+                </div>
+            </div>
+
+            <!-- Steps Visualization -->
+            <div class="grid md:grid-cols-5 gap-4 relative mb-20">
+                <!-- Connecting Line (Desktop) -->
+                <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-stone-200 -z-0 transform translate-y-4"></div>
+
+                <!-- Step 1: Harvesting -->
+                <div class="relative text-center group z-10 flex flex-col h-full">
+                    <div class="w-32 h-32 mx-auto bg-white border-4 border-green-100 rounded-full flex items-center justify-center mb-6 group-hover:border-green-500 transition-colors shadow-sm relative shrink-0">
+                        <i data-lucide="sprout" class="w-12 h-12 text-green-600"></i>
+                        <div class="absolute -top-2 -right-2 bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">1</div>
+                    </div>
+                    <h4 class="font-serif font-bold text-lg mb-3 text-stone-800">Harvesting</h4>
+                    <p class="text-stone-600 text-sm leading-relaxed px-2 mb-4 flex-grow">Hand-picked from our own sustainable gardens and trusted local farmers in Sri Lanka.</p>
+                    <button onclick="document.querySelector('[data-filter=\'harvesting\']').click(); document.querySelector('.filter-container').scrollIntoView({behavior: 'smooth'});" class="inline-flex items-center justify-center text-green-600 font-bold text-xs uppercase tracking-widest hover:text-green-800 transition-colors mt-auto cursor-pointer">
+                        View Details <i data-lucide="arrow-down" class="w-3 h-3 ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Step 2: Dehydration -->
+                <div class="relative text-center group z-10 flex flex-col h-full">
+                    <div class="w-32 h-32 mx-auto bg-white border-4 border-orange-100 rounded-full flex items-center justify-center mb-6 group-hover:border-orange-500 transition-colors shadow-sm relative shrink-0">
+                        <i data-lucide="wind" class="w-12 h-12 text-orange-500"></i>
+                         <div class="absolute -top-2 -right-2 bg-orange-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">2</div>
+                    </div>
+                    <h4 class="font-serif font-bold text-lg mb-3 text-stone-800">Dehydration</h4>
+                    <p class="text-stone-600 text-sm leading-relaxed px-2 mb-4 flex-grow">Advanced drying technology ensures consistent moisture reduction while retaining original potency.</p>
+                    <button onclick="document.querySelector('[data-filter=\'dehydration\']').click(); document.querySelector('.filter-container').scrollIntoView({behavior: 'smooth'});" class="inline-flex items-center justify-center text-orange-600 font-bold text-xs uppercase tracking-widest hover:text-orange-800 transition-colors mt-auto cursor-pointer">
+                        View Details <i data-lucide="arrow-down" class="w-3 h-3 ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Step 3: Tea cut -->
+                <div class="relative text-center group z-10 flex flex-col h-full">
+                    <div class="w-32 h-32 mx-auto bg-white border-4 border-blue-100 rounded-full flex items-center justify-center mb-6 group-hover:border-blue-500 transition-colors shadow-sm relative shrink-0">
+                        <i data-lucide="scissors" class="w-12 h-12 text-blue-600"></i>
+                         <div class="absolute -top-2 -right-2 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">3</div>
+                    </div>
+                    <h4 class="font-serif font-bold text-lg mb-3 text-stone-800">Tea cut ...</h4>
+                    <p class="text-stone-600 text-sm leading-relaxed px-2 mb-4 flex-grow">Precision cutting and blending in a hygienic environment to ensure perfect infusion.</p>
+                    <button onclick="document.querySelector('[data-filter=\'teacut\']').click(); document.querySelector('.filter-container').scrollIntoView({behavior: 'smooth'});" class="inline-flex items-center justify-center text-blue-600 font-bold text-xs uppercase tracking-widest hover:text-blue-800 transition-colors mt-auto cursor-pointer">
+                        View Details <i data-lucide="arrow-down" class="w-3 h-3 ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Step 4: Moisture -->
+                <div class="relative text-center group z-10 flex flex-col h-full">
+                    <div class="w-32 h-32 mx-auto bg-white border-4 border-cyan-100 rounded-full flex items-center justify-center mb-6 group-hover:border-cyan-500 transition-colors shadow-sm relative shrink-0">
+                        <i data-lucide="droplet" class="w-12 h-12 text-cyan-600"></i>
+                         <div class="absolute -top-2 -right-2 bg-cyan-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">4</div>
+                    </div>
+                    <h4 class="font-serif font-bold text-lg mb-3 text-stone-800">Checking Moisture</h4>
+                    <p class="text-stone-600 text-sm leading-relaxed px-2 mb-4 flex-grow">Rigorous quality control to ensure optimal moisture content for long-lasting freshness.</p>
+                    <button onclick="document.querySelector('[data-filter=\'moisture\']').click(); document.querySelector('.filter-container').scrollIntoView({behavior: 'smooth'});" class="inline-flex items-center justify-center text-cyan-600 font-bold text-xs uppercase tracking-widest hover:text-cyan-800 transition-colors mt-auto cursor-pointer">
+                        View Details <i data-lucide="arrow-down" class="w-3 h-3 ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Step 5: Packaging -->
+                <div class="relative text-center group z-10 flex flex-col h-full">
+                    <div class="w-32 h-32 mx-auto bg-white border-4 border-amber-100 rounded-full flex items-center justify-center mb-6 group-hover:border-amber-500 transition-colors shadow-sm relative shrink-0">
+                        <i data-lucide="package" class="w-12 h-12 text-amber-600"></i>
+                         <div class="absolute -top-2 -right-2 bg-amber-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">5</div>
+                    </div>
+                    <h4 class="font-serif font-bold text-lg mb-3 text-stone-800">Packaging Process</h4>
+                    <p class="text-stone-600 text-sm leading-relaxed px-2 mb-4 flex-grow">Sealed immediately into 25-serving packs to lock in freshness and aroma.</p>
+                    <button onclick="document.querySelector('[data-filter=\'packaging\']').click(); document.querySelector('.filter-container').scrollIntoView({behavior: 'smooth'});" class="inline-flex items-center justify-center text-amber-600 font-bold text-xs uppercase tracking-widest hover:text-amber-800 transition-colors mt-auto cursor-pointer">
+                        View Details <i data-lucide="arrow-down" class="w-3 h-3 ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- SECTION: Filter Buttons -->
+            <div class="filter-container flex justify-center items-center gap-2 md:gap-4 mb-12 flex-wrap">
+                <button class="filter-btn active" data-filter="all">All Processes</button>
+                <button class="filter-btn" data-filter="harvesting">Harvesting</button>
+                <button class="filter-btn" data-filter="dehydration">Dehydration</button>
+                <button class="filter-btn" data-filter="teacut">Tea Cut</button>
+                <button class="filter-btn" data-filter="moisture">Moisture Check</button>
+                <button class="filter-btn" data-filter="packaging">Packaging</button>
+            </div>
+        
+            <!-- SECTION: Image Gallery -->
+            <div id="gallery-container" class="gallery-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Gallery items will be injected here via JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-950 text-stone-500 py-12 border-t border-stone-900">
+        <div class="container mx-auto px-4 text-center border-t border-stone-900 pt-8">
+            <p class="text-xs">© <span id="year"></span> Naturella Food Products. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // --- Gallery Data (Editable List) ---
+        const galleryData = [
+            { src: "harvest1.jpg", alt: "Harvesting Process 1", caption: "Hand-picking the finest flowers", category: "harvesting" },
+            { src: "harvest2.jpg", alt: "Harvesting Process 2", caption: "Quality sorting at the source", category: "harvesting" },
+            { src: "harvest3.jpg", alt: "Harvesting Process 3", caption: "Collecting from local farmers", category: "harvesting" },
+            { src: "dehydrate1.jpg", alt: "Dehydration Process 1", caption: "State-of-the-art Dehydrator (food grade , inner 304) ", category: "dehydration" },
+            { src: "dehydrate2.jpg", alt: "Dehydration Process 1", caption: "State-of-the-art Dehydrator (food grade , inner 304) ", category: "dehydration" },
+            { src: "dehydrate3.jpg", alt: "Dehydration Process 2", caption: "Perfectly dried product, ready for processing", category: "dehydration" },
+            { src: "cut1.jpg", alt: "Tea Cut Process", caption: "Precision cutting for perfect infusion", category: "teacut" },
+            { src: "cut2.jpg", alt: "Tea Cut Process", caption: "Passing tea through Magnetic hopper to remove any metal debris if existed", category: "teacut" },
+            { src: "cut3.jpg", alt: "Tea Cut Process", caption: "After passing through", category: "teacut" },
+            { src: "moist1.jpg", alt: "Moisture Check", caption: "Ensuring optimal moisture levels", category: "moisture" },
+            { src: "pack1.jpg", alt: "Packaging Process", caption: "Put processed tea in metal container for safely tranfes to packaging", category: "packaging" },            
+            { src: "pack2.jpg", alt: "Packaging Process 2", caption: "Put processed tea in metal container for safely tranfes to packaging", category: "packaging" }, 
+            { src: "pack3.jpg", alt: "Packaging Process", caption: "getting ready packaging of the teabag", category: "packaging" },            
+            { src: "pack4.jpg", alt: "Packaging Process 2", caption: "Measuring after putting into the teabag", category: "packaging" }, 
+            { src: "pack5.jpg", alt: "Packaging Process", caption: "Sealing for freshness", category: "packaging" },            
+            { src: "pack6.jpg", alt: "Packaging Process 2", caption: "Store 25 fresh teabags, inside a Aluminum pack, for safety", category: "packaging" },
+            { src: "pack7.jpg", alt: "Packaging Process", caption: "Sealing Aluminum Bag", category: "packaging" },            
+            { src: "pack8.jpg", alt: "Packaging Process 2", caption: "Sealing for freshness", category: "packaging" }, 
+            { src: "pack9.jpg", alt: "Packaging Process", caption: "Hygienic and fresh packaging", category: "packaging" },            
+            { src: "pack10.jpg", alt: "Packaging Process 2", caption: "Sealing the box", category: "packaging" }, 
+            { src: "pack12.jpg", alt: "Packaging Process", caption: "Heating with a heat gone to remove air", category: "packaging" },
+            { src: "pack11.jpg", alt: "Packaging Process", caption: "Ready for Export", category: "packaging" },            
+            
+        ];
+
+        // --- Render Gallery ---
+        const galleryContainer = document.getElementById('gallery-container');
+        galleryContainer.innerHTML = galleryData.map(item => `
+            <div class="gallery-item show" data-category="${item.category}">
+                <img src="${item.src}" alt="${item.alt}">
+                <div class="caption">${item.caption}</div>
+            </div>
+        `).join('');
+
+        // --- Gallery Filter Logic ---
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item'); // Selects newly created elements
+
+        // Function to apply filter
+        const applyFilter = (filterValue) => {
+            galleryItems.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+                if (filterValue === 'all' || itemCategory === filterValue) {
+                    item.classList.remove('hide');
+                    item.classList.add('show');
+                } else {
+                    item.classList.remove('show');
+                    item.classList.add('hide');
+                }
+            });
+        };
+
+        // Add click event to each button
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                document.querySelector('.filter-btn.active').classList.remove('active');
+                button.classList.add('active');
+                
+                // Apply the filter
+                const filterValue = button.getAttribute('data-filter');
+                applyFilter(filterValue);
+            });
+        });
+
+        // --- Mobile Menu Logic ---
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        mobileBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                mobileBtn.innerHTML = '<i data-lucide="x" class="w-7 h-7"></i>';
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileBtn.innerHTML = '<i data-lucide="menu" class="w-7 h-7"></i>';
+            }
+            lucide.createIcons(); // Refresh icons
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileMenu.classList.add('hidden');
+                mobileBtn.innerHTML = '<i data-lucide="menu" class="w-7 h-7"></i>';
+                lucide.createIcons();
+            });
+        });
+
+        // --- On Page Load Logic ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set footer year
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // Check URL parameters to apply initial filter
+            const urlParams = new URLSearchParams(window.location.search);
+            const filterParam = urlParams.get('filter');
+            
+            if (filterParam) {
+                const targetBtn = document.querySelector(`.filter-btn[data-filter="${filterParam}"]`);
+                if (targetBtn) {
+                    // Use a small timeout to ensure everything is loaded before clicking
+                    setTimeout(() => {
+                        targetBtn.click();
+                    }, 100);
+                }
+            }
+        });
+
+    </script>
+    <style>
+        /* Overriding some base styles and adding new ones for this page */
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background-color: #e7e5e4; /* stone-200 */
+            color: #57534e; /* stone-600 */
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .filter-btn:hover {
+            background-color: #d6d3d1; /* stone-300 */
+            color: #44403c; /* stone-700 */
+        }
+        .filter-btn.active {
+            background-color: #16a34a; /* green-600 */
+            color: white;
+            box-shadow: 0 4px 14px 0 rgba(22, 163, 74, 0.3);
+        }
+
+        .gallery-item {
+            border-radius: 1rem;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .gallery-item .caption {
+            padding: 1rem;
+            text-align: center;
+            font-weight: 500;
+            color: #44403c; /* stone-700 */
+            background-color: #fafaf9; /* stone-50 */
+            font-size: 0.9rem;
+        }
+    </style>
+</body>
+</html>

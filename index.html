@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naturella Food Products - Ceylon Unique Tropical Food</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        stone: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            300: '#d6d3d1',
+                            400: '#a8a29e',
+                            500: '#78716c',
+                            600: '#57534e',
+                            700: '#44403c',
+                            800: '#292524',
+                            900: '#1c1917',
+                            950: '#0c0a09',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        /* Hide scrollbar for clean look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-sans text-stone-800 bg-stone-50 antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-transparent text-white">
+        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <!-- Logo -->
+                <div class="w-40 h-12 flex items-center justify-center text-white shadow-md">
+                      <img src="Naturella_Logo_new.png" 
+                 alt="Ceylon Tea Plantation"
+                 class="w-35 object-cover transform transition-transform duration-[20s] group-hover:scale-110"/>
+                </div>
+                
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="nav-link font-medium hover:text-orange-400 transition-colors uppercase text-sm tracking-widest drop-shadow-md">About</a>
+                <a href="#products" class="nav-link font-medium hover:text-orange-400 transition-colors uppercase text-sm tracking-widest drop-shadow-md">Products</a>
+                <a href="#benefits" class="nav-link font-medium hover:text-orange-400 transition-colors uppercase text-sm tracking-widest drop-shadow-md">Benefits</a>
+                <a href="#partner" class="nav-link font-medium hover:text-orange-400 transition-colors uppercase text-sm tracking-widest drop-shadow-md">Partner</a>
+                <a href="#contact" class="nav-link font-medium hover:text-orange-400 transition-colors uppercase text-sm tracking-widest drop-shadow-md">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white absolute top-full left-0 w-full shadow-xl border-t border-stone-100">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="#about" class="mobile-link text-left font-bold text-stone-700 hover:text-green-600 py-2 border-b border-stone-100">About</a>
+                <a href="#products" class="mobile-link text-left font-bold text-stone-700 hover:text-green-600 py-2 border-b border-stone-100">Products</a>
+                <a href="#benefits" class="mobile-link text-left font-bold text-stone-700 hover:text-green-600 py-2 border-b border-stone-100">Benefits</a>
+                <a href="#partner" class="mobile-link text-left font-bold text-stone-700 hover:text-green-600 py-2 border-b border-stone-100">Partner</a>
+                <a href="#contact" class="mobile-link text-left font-bold text-stone-700 hover:text-green-600 py-2 border-b border-stone-100">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-[85vh] flex items-center justify-center overflow-hidden group">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-stone-900/90 z-10"></div>
+            <!-- Hero Image -->
+            <img src="cover_img.png" 
+                 alt="Ceylon Tea Plantation"
+                 class="w-full h-full object-cover absolute inset-0 transform transition-transform duration-[20s] group-hover:scale-110">
+        </div>
+        
+        <div class="relative z-20 text-center px-4 max-w-5xl mx-auto mt-12 animate-fadeIn">
+            <div class="inline-block mb-6 px-4 py-1.5 border-2 border-orange-400/80 rounded-full bg-black/20 backdrop-blur-sm text-orange-300 text-xs md:text-sm font-bold tracking-[0.2em] uppercase">
+                Ceylonese Unicus Tropical Food
+            </div>
+            <h1 class="text-5xl md:text-8xl font-serif font-bold text-white mb-8 leading-none shadow-sm">
+                Nature's Purest <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-orange-300">Essence</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-stone-200 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                Discover the healing power of Ceylon. 100% natural herbal teas, free from artificial preservatives, brought straight from the tropical gardens to your cup.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <a href="#products" class="bg-orange-600 hover:bg-orange-700 text-white px-10 py-4 rounded-full font-bold transition-all transform hover:scale-105 shadow-xl hover:shadow-orange-900/50 flex items-center justify-center tracking-wide">
+                    View Collection <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                </a>
+                <a href="#about" class="bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white/20 px-10 py-4 rounded-full font-bold transition-all flex items-center justify-center tracking-wide">
+                    Our Story
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-4 md:px-6 bg-white relative">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-16 mb-20">
+                <div class="md:w-1/2 relative">
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-orange-100 rounded-full opacity-50 blur-3xl"></div>
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-green-100 rounded-full opacity-50 blur-3xl"></div>
+                    <div class="relative bg-stone-50 p-10 rounded-tl-[4rem] rounded-br-[4rem] shadow-xl border border-stone-100 overflow-hidden">
+                        <div class="absolute top-0 right-0 p-8 opacity-5">
+                            <i data-lucide="leaf" class="w-[120px] h-[120px]"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-stone-800 mb-6 relative z-10">Why Choose Naturella?</h3>
+                        <ul class="space-y-6 relative z-10">
+                            <li class="flex">
+                                <div class="shrink-0 mt-1 mr-4 text-green-600"><i data-lucide="check-circle" class="w-6 h-6"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-stone-900 text-lg">100% Natural</h4>
+                                    <p class="text-stone-600 text-sm leading-relaxed">No artificial flavors, sweeteners, or preservatives.</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="shrink-0 mt-1 mr-4 text-green-600"><i data-lucide="check-circle" class="w-6 h-6"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-stone-900 text-lg">Ceylon Origin</h4>
+                                    <p class="text-stone-600 text-sm leading-relaxed">Sourced directly from the nutrient-rich soils of Sri Lanka.</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="shrink-0 mt-1 mr-4 text-green-600"><i data-lucide="check-circle" class="w-6 h-6"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-stone-900 text-lg">Holistic Wellness</h4>
+                                    <p class="text-stone-600 text-sm leading-relaxed">Traditional Ayurvedic recipes for modern health needs.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-orange-600 font-bold text-sm tracking-widest uppercase mb-3">Who We Are</h2>
+                    <h3 class="text-4xl md:text-5xl font-serif font-bold text-stone-900 mb-6">
+                        Rooted in <span class="italic text-green-700">Tradition</span>
+                    </h3>
+                    <p class="text-stone-600 text-lg leading-relaxed mb-6">
+                        At Naturella Food Products, we believe that nature holds the cure. Our mission is to share the "Unique Tropical Food" of Ceylon with the world.
+                    </p>
+                    <p class="text-stone-600 text-lg leading-relaxed mb-8">
+                        From the rare purple blooms of Heen Bovitiya to the world-renowned Ceylon Cinnamon, every box we produce is a testament to purity. We ensure that every sip you take is 100% natural, ethical, and preserving the authentic tropical essence.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Vision & Mission Grid -->
+            <div class="grid lg:grid-cols-3 gap-8 mt-8 border-t border-stone-100 pt-16">
+                <!-- Vision -->
+                <div class="bg-stone-50 p-8 rounded-2xl border-l-4 border-green-600 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="absolute right-0 top-0 w-32 h-32 bg-green-100 rounded-full -mr-10 -mt-10 opacity-50 group-hover:scale-150 transition-transform duration-700 ease-in-out"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mr-4 text-green-700">
+                                <i data-lucide="eye" class="w-6 h-6"></i>
+                            </div>
+                            <h4 class="text-2xl font-serif font-bold text-stone-800">Our Vision</h4>
+                        </div>
+                        <p class="text-stone-600 text-lg leading-relaxed">
+                            To be a winning provider of fresh, healthy, and sustainable food products, enriching lives and communities through our commitment to quality and innovation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Mission -->
+                <div class="bg-stone-50 p-8 rounded-2xl border-l-4 border-orange-500 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="absolute right-0 top-0 w-32 h-32 bg-orange-100 rounded-full -mr-10 -mt-10 opacity-50 group-hover:scale-150 transition-transform duration-700 ease-in-out"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mr-4 text-orange-700">
+                                <i data-lucide="target" class="w-6 h-6"></i>
+                            </div>
+                            <h4 class="text-2xl font-serif font-bold text-stone-800">Our Mission</h4>
+                        </div>
+                        <p class="text-stone-600 text-lg leading-relaxed">
+                            Our mission is to deliver superior-quality food products while fostering social responsibility and environmental stewardship, thereby promoting well-being and sustainability.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Goal -->
+                <div class="bg-stone-50 p-8 rounded-2xl border-l-4 border-blue-600 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="absolute right-0 top-0 w-32 h-32 bg-blue-100 rounded-full -mr-10 -mt-10 opacity-50 group-hover:scale-150 transition-transform duration-700 ease-in-out"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mr-4 text-blue-700">
+                                <i data-lucide="flag" class="w-6 h-6"></i>
+                            </div>
+                            <h4 class="text-2xl font-serif font-bold text-stone-800">Our Goal</h4>
+                        </div>
+                        <p class="text-stone-600 text-lg leading-relaxed">
+                            To be a trusted leader in sustainable food production with home grown produce, impacting lives positively, fostering community growth, and contributing to a healthier, more sustainable future.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Production Process Section (New) -->
+    <section id="process" class="py-24 px-4 md:px-6 bg-stone-50 border-t border-stone-100">
+        <div class="container mx-auto">
+             <!-- Header -->
+             <div class="text-center mb-20">
+                <h2 class="text-green-700 font-bold text-sm tracking-widest uppercase mb-3">How It's Made</h2>
+                <h3 class="text-4xl md:text-5xl font-serif font-bold text-stone-900">From Garden to Cup</h3>
+                <p class="text-stone-600 mt-4 max-w-2xl mx-auto">We meticulously control every step of the process to ensure the purity and potency of nature is preserved in every sip.</p>
+             </div>
+
+             <!-- Steps -->
+             <div class="grid md:grid-cols-5 gap-4 relative">
+                <!-- Connecting Line (Desktop) -->
+                <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-stone-200 -z-0 transform translate-y-4"></div>
+
+                <!-- Step 1 -->
+                <div class="relative text-center group z-10 flex flex-col h-full">
+                    <div class="w-32 h-32 mx-auto bg-white border-4 border-green-100 rounded-full flex items-center justify-center mb-6 group-hover:border-green-500 transition-colors shadow-sm relative shrink-0">
+                        <i data-lucide="sprout" class="w-12 h-12 text-green-600"></i>
+                        <div class="absolute -top-2 -right-2 bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">1</div>
+                    </div>
+                    <h4 class="font-serif font-bold text-lg mb-3 text-stone-800">Harvesting</h4>
+                    <p class="text-stone-600 text-sm leading-relaxed px-2 mb-4 flex-grow">Hand-picked from our own sustainable gardens and trusted local farmers in Sri Lanka.</p>
+                    <a href="product_process/process.html?filter=harvesting" class="inline-flex items-center justify-center text-green-600 font-bold text-xs uppercase tracking-widest hover:text-green-800 transition-colors mt-auto">
+                        View Process <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative text-center group z-10 flex flex-col h-full">
+                    <div class="w-32 h-32 mx-auto bg-white border-4 border-orange-100 rounded-full flex items-center justify-center mb-6 group-hover:border-orange-500 transition-colors shadow-sm relative shrink-0">
+                        <i data-lucide="wind" class="w-12 h-12 text-orange-500"></i>
+                         <div class="absolute -top-2 -right-2 bg-orange-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">2</div>
+                    </div>
+                    <h4 class="font-serif font-bold text-lg mb-3 text-stone-800">Dehydration</h4>
+                    <p class="text-stone-600 text-sm leading-relaxed px-2 mb-4 flex-grow">Advanced drying technology ensures consistent moisture reduction while retaining original potency and hygiene.</p>
+                    <a href="product_process/process.html?filter=dehydration" class="inline-flex items-center justify-center text-orange-600 font-bold text-xs uppercase tracking-widest hover:text-orange-800 transition-colors mt-auto">
+                        View Process <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative text-center group z-10 flex flex-col h-full">
+                    <div class="w-32 h-32 mx-auto bg-white border-4 border-blue-100 rounded-full flex items-center justify-center mb-6 group-hover:border-blue-500 transition-colors shadow-sm relative shrink-0">
+                        <i data-lucide="scissors" class="w-12 h-12 text-blue-600"></i>
+                         <div class="absolute -top-2 -right-2 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">3</div>
+                    </div>
+                    <h4 class="font-serif font-bold text-lg mb-3 text-stone-800">Tea cut ...</h4>
+                    <p class="text-stone-600 text-sm leading-relaxed px-2 mb-4 flex-grow">Precision cutting and blending in a hygienic environment to ensure perfect infusion.</p>
+                    <a href="product_process/process.html?filter=all" class="inline-flex items-center justify-center text-blue-600 font-bold text-xs uppercase tracking-widest hover:text-blue-800 transition-colors mt-auto">
+                        View Process <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative text-center group z-10 flex flex-col h-full">
+                    <div class="w-32 h-32 mx-auto bg-white border-4 border-cyan-100 rounded-full flex items-center justify-center mb-6 group-hover:border-cyan-500 transition-colors shadow-sm relative shrink-0">
+                        <i data-lucide="droplet" class="w-12 h-12 text-cyan-600"></i>
+                         <div class="absolute -top-2 -right-2 bg-cyan-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">4</div>
+                    </div>
+                    <h4 class="font-serif font-bold text-lg mb-3 text-stone-800">Checking the Moisture Level</h4>
+                    <p class="text-stone-600 text-sm leading-relaxed px-2 mb-4 flex-grow">Rigorous quality control to ensure optimal moisture content for long-lasting freshness.</p>
+                    <a href="product_process/process.html?filter=all" class="inline-flex items-center justify-center text-cyan-600 font-bold text-xs uppercase tracking-widest hover:text-cyan-800 transition-colors mt-auto">
+                        View Process <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="relative text-center group z-10 flex flex-col h-full">
+                    <div class="w-32 h-32 mx-auto bg-white border-4 border-amber-100 rounded-full flex items-center justify-center mb-6 group-hover:border-amber-500 transition-colors shadow-sm relative shrink-0">
+                        <i data-lucide="package" class="w-12 h-12 text-amber-600"></i>
+                         <div class="absolute -top-2 -right-2 bg-amber-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">5</div>
+                    </div>
+                    <h4 class="font-serif font-bold text-lg mb-3 text-stone-800">Packaging Process</h4>
+                    <p class="text-stone-600 text-sm leading-relaxed px-2 mb-4 flex-grow">Sealed immediately into 25-serving packs to lock in freshness and aroma.</p>
+                    <a href="product_process/process.html?filter=packaging" class="inline-flex items-center justify-center text-amber-600 font-bold text-xs uppercase tracking-widest hover:text-amber-800 transition-colors mt-auto">
+                        View Process <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i>
+                    </a>
+                </div>
+             </div>
+        </div>
+    </section>
+
+
+    <!-- Products Section -->
+    <section id="products" class="py-24 px-4 md:px-6 bg-stone-100">
+        <div class="container mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-green-700 font-bold text-sm tracking-widest uppercase mb-3">Our Herbal Collection</h2>
+                <h3 class="text-4xl md:text-5xl font-serif font-bold text-stone-900">Pure Tropical Infusions</h3>
+                <p class="text-stone-600 mt-6 max-w-2xl mx-auto text-lg">
+                    Explore our range of 25-serving herbal tea packs, each designed to target specific health benefits while delighting your palate.
+                </p>
+            </div>
+
+            <!-- Product Grid -->
+            <div id="product-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Products will be injected here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 bg-stone-900 text-stone-300">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-stone-800">
+                <div class="p-4">
+                    <div class="flex justify-center mb-4 text-orange-500"><i data-lucide="sun" class="w-12 h-12"></i></div>
+                    <h4 class="text-white font-bold text-lg mb-2">Tropical Sourced</h4>
+                    <p class="text-sm">Grown in the warm, fertile climate of Sri Lanka.</p>
+                </div>
+                <div class="p-4">
+                    <div class="flex justify-center mb-4 text-red-500"><i data-lucide="heart" class="w-12 h-12"></i></div>
+                    <h4 class="text-white font-bold text-lg mb-2">No Additives</h4>
+                    <p class="text-sm">Free from preservatives, sweeteners, and artificial colors.</p>
+                </div>
+                <div class="p-4">
+                    <div class="flex justify-center mb-4 text-amber-500"><i data-lucide="coffee" class="w-12 h-12"></i></div>
+                    <h4 class="text-white font-bold text-lg mb-2">25 Servings</h4>
+                    <p class="text-sm">Each pack contains 25 servings of pure herbal goodness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Section -->
+    <section id="partner" class="py-24 px-4 md:px-6 bg-gradient-to-br from-green-50 to-emerald-100 relative overflow-hidden">
+        <!-- Abstract shapes -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+
+        <div class="container mx-auto relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-green-700 font-bold text-sm tracking-widest uppercase mb-4">Grow With Us</h2>
+                <h3 class="text-4xl md:text-5xl font-serif font-bold text-stone-900 mb-8">Global Partnership Opportunities</h3>
+                <p class="text-lg text-stone-700 mb-12 leading-relaxed">
+                    We are looking for partners to venture into foreign markets. Whether you want to become a distributor of Naturella products or collaborate on expanding our global footprint, we are ready to connect.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6 text-left mb-12">
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-green-100 transform hover:-translate-y-1 transition-transform">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 text-green-700">
+                            <i data-lucide="globe" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-2 text-stone-800">Export Markets</h4>
+                        <p class="text-stone-600 text-sm">Expand the customer base in your country with our unique tropical product line.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-green-100 transform hover:-translate-y-1 transition-transform">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4 text-indigo-700">
+                           <i data-lucide="flower" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-2 text-stone-800">Joint Ventures</h4>
+                        <p class="text-stone-600 text-sm">Contribute to selling more products and promoting the market together.</p>
+                    </div>
+                </div>
+
+                <a href="#contact" class="inline-block bg-stone-900 text-white px-12 py-4 rounded-full font-bold text-lg hover:bg-stone-800 transition-all shadow-xl hover:shadow-2xl">
+                    Become a Partner
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-4 md:px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="max-w-5xl mx-auto bg-stone-900 rounded-[3rem] shadow-2xl overflow-hidden relative">
+                <!-- Background Pattern/Gradient -->
+                <div class="absolute top-0 right-0 w-96 h-96 bg-green-600 rounded-full mix-blend-overlay filter blur-[100px] opacity-20 translate-x-1/3 -translate-y-1/3"></div>
+                <div class="absolute bottom-0 left-0 w-80 h-80 bg-orange-600 rounded-full mix-blend-overlay filter blur-[80px] opacity-20 -translate-x-1/3 translate-y-1/3"></div>
+
+                <div class="p-12 md:p-20 text-center relative z-10">
+                    <h2 class="text-green-500 font-bold text-sm tracking-[0.2em] uppercase mb-4">Get In Touch</h2>
+                    <h3 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Contact Us</h3>
+                    <p class="text-stone-400 mb-16 max-w-2xl mx-auto text-lg leading-relaxed">
+                        Ready to experience the uniqueness of Ceylon? Whether for orders, partnerships, or general inquiries, we are here to help you grow with nature.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-10">
+                        <!-- Address -->
+                        <div class="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col items-center">
+                            <div class="w-16 h-16 rounded-full bg-stone-800 flex items-center justify-center mb-6 group-hover:bg-green-600 transition-colors duration-300 shadow-lg">
+                                <i data-lucide="map-pin" class="w-7 h-7 text-stone-300 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <h4 class="font-bold text-xl text-white mb-3">Visit Us</h4>
+                            <p class="text-stone-400 text-sm leading-relaxed">
+                                Y & S Naturella Food Products (Pvt) Ltd,<br/>No 325/1, Wawinna,<br/>Palapathwala, Matale,<br/>Sri Lanka
+                            </p>
+                        </div>
+                        
+                        <!-- Phone -->
+                        <div class="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col items-center">
+                            <div class="w-16 h-16 rounded-full bg-stone-800 flex items-center justify-center mb-6 group-hover:bg-orange-600 transition-colors duration-300 shadow-lg">
+                                <i data-lucide="phone" class="w-7 h-7 text-stone-300 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <h4 class="font-bold text-xl text-white mb-3">Call Us</h4>
+                            <a href="tel:+94714418735" class="block text-stone-400 hover:text-white transition-colors mb-1">+94 71 441 8735</a>
+                            <a href="tel:+94715667073" class="block text-stone-400 hover:text-white transition-colors">+94 71 566 7073</a>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col items-center">
+                            <div class="w-16 h-16 rounded-full bg-stone-800 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-300 shadow-lg">
+                                <i data-lucide="mail" class="w-7 h-7 text-stone-300 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <h4 class="font-bold text-xl text-white mb-3">Email Us</h4>
+                            <a href="mailto:naturellafoodproducts@gmail.com" class="text-stone-400 hover:text-white transition-colors break-all text-sm">naturellafoodproducts@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-950 text-stone-500 py-12 border-t border-stone-900">
+        <div class="container mx-auto px-4 grid md:grid-cols-4 gap-8 mb-8">
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center space-x-2 mb-4">
+                    <div class="w-8 h-8 bg-gradient-to-br from-green-600 to-orange-500 rounded-tr-xl rounded-bl-xl flex items-center justify-center text-white font-bold text-sm">N</div>
+                    <span class="font-bold text-white tracking-wide text-lg">Naturella</span>
+                </div>
+                <p class="text-sm leading-relaxed mb-4">
+                    Ceylon Unique Tropical Food. Bringing the finest, 100% natural herbal products from Sri Lanka to the world.
+                </p>
+            </div>
+            
+            <div>
+                <h5 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Products</h5>
+                <ul id="footer-product-list" class="space-y-2 text-sm">
+                    <!-- Products injected via JS -->
+                </ul>
+            </div>
+            
+            <div>
+                <h5 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Company</h5>
+                <ul class="space-y-2 text-sm">
+                    <li class="hover:text-green-500 cursor-pointer transition-colors"><a href="#about">About Us</a></li>
+                    <li class="hover:text-green-500 cursor-pointer transition-colors"><a href="#partner">Partner With Us</a></li>
+                    <li class="hover:text-green-500 cursor-pointer transition-colors"><a href="#contact">Contact</a></li>
+                    <li class="hover:text-green-500 cursor-pointer transition-colors">Privacy Policy</li>
+                </ul>
+            </div>
+
+            <div>
+                <h5 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Connect With Us</h5>
+                <div class="flex space-x-3">
+                    <a href="https://www.facebook.com/naturellafoodlk" class="w-10 h-10 rounded-full bg-stone-900 flex items-center justify-center text-stone-400 hover:bg-blue-600 hover:text-white transition-all duration-300 border border-stone-800">
+                        <i data-lucide="facebook" class="w-[18px] h-[18px]"></i>
+                    </a>
+                    <a href="https://naturellafoods.com/" class="w-10 h-10 rounded-full bg-stone-900 flex items-center justify-center text-stone-400 hover:bg-pink-600 hover:text-white transition-all duration-300 border border-stone-800">
+                        <i data-lucide="globe" class="w-[18px] h-[18px]"></i>
+                    </a>
+                    <!-- <a href="#" class="w-10 h-10 rounded-full bg-stone-900 flex items-center justify-center text-stone-400 hover:bg-blue-400 hover:text-white transition-all duration-300 border border-stone-800">
+                        <i data-lucide="twitter" class="w-[18px] h-[18px]"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-stone-900 flex items-center justify-center text-stone-400 hover:bg-red-600 hover:text-white transition-all duration-300 border border-stone-800">
+                        <i data-lucide="youtube" class="w-[18px] h-[18px]"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-stone-900 flex items-center justify-center text-stone-400 hover:bg-blue-700 hover:text-white transition-all duration-300 border border-stone-800">
+                        <i data-lucide="linkedin" class="w-[18px] h-[18px]"></i>
+                    </a> -->
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 text-center border-t border-stone-900 pt-8">
+            <p class="text-xs">© <span id="year"></span> Naturella Food Products. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Data for Products
+        const products = [
+            {
+                id: 0,
+                name: "Ceylon Red Tea",
+                subName: "Hibiscus Flower Tea",
+                scientific: "Hibiscus rosa-sinensis",
+                type: "Herbal Tea",
+                themeColor: "red",
+                description: "A vibrant, ruby-red infusion made from the special multi-petal 'Pokuru Wada Mal'. This tart, cranberry-like tea is a powerhouse of antioxidants, known to support heart health and naturally cool the body.",
+                features: ["25 Servings", "Heart Health Support", "Rich in Antioxidants", "100% Natural"],
+                image: "red_tea.png"
+            },
+            {
+                id: 1,
+                name: "Ceylon Blue Tea",
+                subName: "Butterfly Pea Flower Tea",
+                scientific: "Clitoria ternatea",
+                type: "Herbal Tea",
+                themeColor: "indigo",
+                description: "Experience the enchanting allure of Butterfly Pea Tea. Its vivid blue hue, derived from natural blossoms, transforms your tea time into a visual delight. With a subtle earthy flavor and soothing properties, it's a captivating and calming choice.",
+                features: ["25 Servings", "No Artificial Preservatives", "100% Natural", "Caffeine Free"],
+                image: "blue_tea.png",
+                link: "https://naturellafoods.com/product/butterfly-pea-herbal-tea/"
+            },
+            {
+                id: 2,
+                name: "Moringa with Cinnamon",
+                subName: "Ceylon Moringa with Ceylon Cinnamon Herbal Tea",
+                scientific: "Moringa oleifera",
+                type: "Herbal Tea",
+                themeColor: "green",
+                description: "A powerful blend of nutrient-rich Moringa leaves and aromatic Ceylon Cinnamon(5%-6%). This 100% natural herbal tea combines the 'Miracle Tree' benefits with the warming spice of true cinnamon for a healthy, revitalizing brew.",
+                features: ["25 Servings", "Nutrient Rich", "Supports Metabolism","6% Cinnamon", "100% Natural"],
+                image: "moring_tea.png",
+                link: "https://naturellafoods.com/product/moringa-herbal-tea/"
+            },
+            {
+                id: 3,
+                name: "Heen Bovitiya with Cumin",
+                subName: "Rare Herbal Tea",
+                scientific: "Osbeckia octandra",
+                type: "Herbal Tea",
+                themeColor: "purple",
+                description: "Featuring the beautiful endemic flower of Sri Lanka, Heen Bovitiya. Known in traditional Ayurveda for its liver-protecting properties, this unique infusion with cumin offers a distinct taste of Ceylonese wellness.",
+                features: ["25 Servings", "Liver Health Support", "Rare Endemic Herb", "100% Natural"],
+                image: "heenbovitia.png",
+                link: "https://naturellafoods.com/product/heen-bowitiya-herbal-tea/"
+            },
+            {
+                id: 4,
+                name: "Ceylon Cinnamon",
+                subName: "Pure Herbal Tea",
+                scientific: "Cinnamomum verum",
+                type: "Herbal Tea",
+                themeColor: "amber",
+                description: "Savor the authentic taste of True Cinnamon (Cinnamomum verum). Sourced directly from Ceylon plantations, this tea offers a naturally sweet, spicy aroma that regulates blood sugar and warms the soul.",
+                features: ["25 Servings", "True Cinnamon", "Blood Sugar Support", "100% Natural"],
+                image: "cinnamon_tea.png",
+                link: "https://naturellafoods.com/product/ceylon-cinnamon-herbal-tea/"
+            },
+            {
+                id: 5,
+                name: "Turmeric & Ginger",
+                subName: "Immunity Blend",
+                scientific: "Curcuma longa & Zingiber officinale",
+                type: "Herbal Tea",
+                themeColor: "orange",
+                description: "A golden elixir combining the anti-inflammatory power of Turmeric with the digestive aid of Ginger. This spicy, warming tea is your perfect daily shield for immunity and vitality.",
+                features: ["25 Servings", "Anti-Inflammatory", "Digestive Aid", "100% Natural"],
+                image: "turmicnginger.png"
+            },
+            {
+                id: 6,
+                name: "Lemongrass",
+                subName: "Refreshing Herbal Tea",
+                scientific: "Cymbopogon citratus",
+                type: "Upcomming",
+                themeColor: "yellow",
+                description: "Zesty and refreshing, our Lemongrass tea is the perfect palate cleanser. Known for its ability to relieve stress and aid digestion, it brings a citrusy burst of tropical freshness to your cup.",
+                features: ["25 Servings", "Stress Relief", "Citrus Flavor", "100% Natural"],
+                image: "lemongrass_tea.png"
+            },
+            {
+                id: 7,
+                name: "Chai Spiced",
+                subName: "Premium Ceylon Black Tea",
+                scientific: "Camellia sinensis & Spices",
+                type: "Premium Tea",
+                themeColor: "amber",
+                description: "A robust and aromatic blend of premium Ceylon Black Tea infused with exotic spices. This traditional Chai offers a warming, energizing experience that awakens the senses with every sip.",
+                features: ["25 Servings", "Premium Black Tea", "Aromatic Spices", "Energizing"],
+                image: "Chai_tea.png",
+                link: "https://naturellafoods.com/product/chai-tea/"
+            },
+            {
+                id: 8,
+                name: "Bael Flower",
+                subName: "Traditional Herbal Tea",
+                scientific: "Aegle marmelos",
+                type: "Herbal Tea",
+                themeColor: "yellow",
+                description: "Savor the soothing goodness of 100% natural Bael Flower tea. Treasured in Ayurveda for its digestive benefits and cooling properties, this golden infusion is a gentle daily tonic.",
+                features: ["25 Servings", "Digestive Support", "Cooling Property", "100% Natural"],
+                image: "bael_flower.png",
+                link: "https://naturellafoods.com/product/beal-flower-herbal-tea/"
+            }
+        ];
+
+        // Theme Configuration for Colors (mimicking React logic)
+        const themeConfig = {
+            red: { text: 'text-red-900', badge: 'bg-red-600 text-white', btn: 'bg-red-700 hover:bg-red-800', dot: 'bg-red-500' },
+            indigo: { text: 'text-indigo-900', badge: 'bg-indigo-50 text-indigo-900', btn: 'bg-indigo-600 hover:bg-indigo-700', dot: 'bg-indigo-500' },
+            green: { text: 'text-green-900', badge: 'bg-green-50 text-green-900', btn: 'bg-green-600 hover:bg-green-700', dot: 'bg-green-500' },
+            purple: { text: 'text-purple-900', badge: 'bg-purple-50 text-purple-900', btn: 'bg-purple-600 hover:bg-purple-700', dot: 'bg-purple-500' },
+            amber: { text: 'text-amber-900', badge: 'bg-amber-50 text-amber-900', btn: 'bg-amber-700 hover:bg-amber-800', dot: 'bg-amber-500' },
+            orange: { text: 'text-orange-900', badge: 'bg-orange-50 text-orange-900', btn: 'bg-orange-600 hover:bg-orange-700', dot: 'bg-orange-500' },
+            yellow: { text: 'text-yellow-900', badge: 'bg-yellow-50 text-yellow-900', btn: 'bg-yellow-600 hover:bg-yellow-700', dot: 'bg-yellow-500' },
+        };
+
+        // Render Products
+        const productGrid = document.getElementById('product-grid');
+        products.forEach(product => {
+            const theme = themeConfig[product.themeColor] || themeConfig.green;
+            
+            const card = document.createElement('div');
+            // Redesigned card class: cleaner border, softer shadow, white bg
+            card.className = "group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-stone-100 flex flex-col h-full";
+            
+            card.innerHTML = `
+                <div class="h-72 relative overflow-hidden">
+                    <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80"></div>
+                    
+                    <!-- Type Badge (Top Left) -->
+                    <div class="absolute top-4 left-4">
+                         <span class="inline-block px-4 py-1.5 rounded-full text-[0.65rem] font-bold uppercase tracking-widest shadow-lg backdrop-blur-md ${theme.badge}">
+                            ${product.type}
+                        </span>
+                    </div>
+
+                    <!-- Title Overlay (Bottom Left) -->
+                    <div class="absolute bottom-0 left-0 p-6 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                        <h4 class="text-2xl font-serif font-bold text-white leading-none mb-2 drop-shadow-lg">${product.name}</h4>
+                        <p class="text-xs text-white/90 font-medium tracking-wide uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 italic">${product.scientific}</p>
+                    </div>
+                </div>
+                
+                <div class="p-8 flex-grow flex flex-col">
+                    <div class="text-lg font-bold text-stone-800 mb-3"><h5>${product.subName}</h5><p class="text-sm text-stone-600 italic">(${product.scientific})</p></div>
+                    <p class="text-stone-600 mb-6 text-sm leading-relaxed flex-grow font-light">${product.description}</p>
+                    
+                    <div class="space-y-3 mb-8 border-t border-stone-100 pt-6">
+                        ${product.features.map(feature => `
+                            <div class="flex items-center text-xs font-medium text-stone-500">
+                                <i data-lucide="check" class="w-3 h-3 mr-2 ${theme.text}"></i>
+                                ${feature}
+                            </div>
+                        `).join('')}
+                    </div>
+                    
+                    <a href="${product.link || 'not_found.html'}" class="w-full py-4 rounded-xl font-bold text-white text-sm uppercase tracking-wider transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 ${theme.btn} flex items-center justify-center group-hover:ring-2 ring-offset-2 ring-transparent group-hover:ring-${product.themeColor}-200">
+                        View Product
+                    </a>
+                </div>
+            `;
+            productGrid.appendChild(card);
+        });
+
+        // Render Footer Products
+        const footerProductList = document.getElementById('footer-product-list');
+        products.forEach(product => {
+            const li = document.createElement('li');
+            li.className = "hover:text-green-500 cursor-pointer transition-colors";
+            li.innerHTML = `<a href="${product.link || 'not_found.html'}">${product.name}</a>`;
+            footerProductList.appendChild(li);
+        });
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Footer Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar Scroll Logic
+        const navbar = document.getElementById('navbar');
+        const navTitle = document.getElementById('nav-title');
+        const navSubtitle = document.getElementById('nav-subtitle');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.remove('bg-transparent', 'text-white', 'py-4');
+                navbar.classList.add('bg-white', 'text-stone-800', 'shadow-lg', 'py-2');
+                
+                navTitle.classList.add('text-green-900');
+                navSubtitle.classList.remove('text-orange-200');
+                navSubtitle.classList.add('text-orange-600');
+                
+                navLinks.forEach(link => link.classList.add('text-stone-600'));
+                mobileBtn.classList.remove('text-white');
+                mobileBtn.classList.add('text-green-800');
+            } else {
+                navbar.classList.add('bg-transparent', 'text-white', 'py-4');
+                navbar.classList.remove('bg-white', 'text-stone-800', 'shadow-lg', 'py-2');
+                
+                navTitle.classList.remove('text-green-900');
+                navSubtitle.classList.add('text-orange-200');
+                navSubtitle.classList.remove('text-orange-600');
+                
+                navLinks.forEach(link => link.classList.remove('text-stone-600'));
+                mobileBtn.classList.add('text-white');
+                mobileBtn.classList.remove('text-green-800');
+            }
+        });
+
+        // Mobile Menu Logic
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        mobileBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                mobileBtn.innerHTML = '<i data-lucide="x" class="w-7 h-7"></i>';
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileBtn.innerHTML = '<i data-lucide="menu" class="w-7 h-7"></i>';
+            }
+            lucide.createIcons(); // Refresh icons
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileMenu.classList.add('hidden');
+                mobileBtn.innerHTML = '<i data-lucide="menu" class="w-7 h-7"></i>';
+                lucide.createIcons();
+            });
+        });
+
+    </script>
+</body>
+</html>
